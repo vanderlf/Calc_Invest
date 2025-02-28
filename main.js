@@ -79,7 +79,6 @@ function renderProgression(evt) {
   progressionChartReference = new Chart(progressionChart, {
     type: 'bar',
     data: {
-      // labels: returnsArray.map((investimentObject) => investimentObject.month),
       labels: returnsArray.map((investimentObject) => investimentObject.month),
       datasets: [
         {
