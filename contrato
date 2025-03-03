@@ -1,0 +1,27 @@
+import { defaultAllowedOrigins } from "vite";
+
+// // contrato
+// 1 - Sistema deve usar tailwindcss;
+// 2 - Sistema deve ter um elemento html do tipo table (com ID definido) preparado e sem informações adicionais;
+// 3 - São necessarios 2 arrays para a geração da tabela ...;
+//     3.1 - Um array de dados 
+//     3.2 - Um array com objetos que caracterizam as colunas 
+//     3.3 - não é obrigatorio, mas, pode-se passar uma função de formatação dos dados da coluna. 
+
+
+// type columnObject = {
+//     columnLabel: 'string';
+//     accessor> 'string';
+//     formatFN? : (info: number | String )=> stringify;
+// }
+
+// type columnsArray = columnObject[];
+
+// [
+//     {columnLabel: 'Total Investido', accessor:'investedAmount'},
+//     {columnLabel: 'Rendimento Mensal', accessor:'interestReturns'},
+//     {columnLabel: 'Rendimento Total', accessor:'totalInterestReturns'},
+//     {columnLabel: 'Mês', accessor:'month'},
+//     {columnLabel: 'Saldo Total', accessor:'totalAmount'}
+// ]
+
