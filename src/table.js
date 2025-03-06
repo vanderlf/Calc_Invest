@@ -62,8 +62,9 @@ function createTableBody(tableReference, tableItems, columnsArray) {
       tableRow.classList.add('bg-blue-200');
     }
     for (const tableColumn of columnsArray) {
+      const formatFn = tableColumn.format ?? ((info) => info);
       tableRow.innerHTML += /*html*/ `<td class ='text-center'>${
-        tableItem[tableColumn.accessor]
+        formatFn(tableItem[tableColumn.accessor])
       }</td>`;
     }
     tableBodyReference.appendChild(tableRow);

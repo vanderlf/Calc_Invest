@@ -20,9 +20,9 @@ export function generateReturnsArray(
       ? 1 + returnRate / 100
       : convertToMonthlyreturnRate(1 + returnRate / 100);
 
-  const finalTimeHotizon =
+  const finalTimeHorizon =
     timePeriod === 'monthly' ? timeHorizon : timeHorizon * 12;
-
+ 
   const referenceInvestmentObject = {
     investedAmount: startingAmount,
     interestReturns: 0,
@@ -33,7 +33,7 @@ export function generateReturnsArray(
   const returnsArray = [referenceInvestmentObject];
   for (
     let timeReference = 1;
-    timeReference <= finalTimeHotizon;
+    timeReference <= finalTimeHorizon;
     timeReference++
   ) {
     const totalAmount =
@@ -43,6 +43,7 @@ export function generateReturnsArray(
       returnsArray[timeReference - 1].totalAmount * (finalReturnRate - 1);
     const investedAmount = startingAmount + monthlyContribution * timeReference;
     const totalInterestReturns = totalAmount - investedAmount;
+
 
     returnsArray.push({
       investedAmount,
