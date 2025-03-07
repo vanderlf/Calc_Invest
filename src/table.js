@@ -2,7 +2,12 @@ const isNonEmptyArray = (arrayElement) => {
   return Array.isArray(arrayElement) && arrayElement.length > 0;
 };
 
+const tabela = document.getElementById('results-table');
+
 export const createTable = (columnsArray, dataArray, tableId) => {
+
+
+
   if (
     !isNonEmptyArray(columnsArray) &&
     !isNonEmptyArray(dataArray) &&

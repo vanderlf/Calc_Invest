@@ -76,7 +76,6 @@ function renderProgression(evt) {
   const taxRate = Number(
     document.getElementById('tax-rate').value.replace(',', '.')
   );
-  console.log('tx_impostos', taxRate);
 
   const returnsArray = generateReturnsArray(
     startingAmount,
@@ -88,7 +87,6 @@ function renderProgression(evt) {
   );
 
   const finalInvestimentObject = returnsArray[returnsArray.length - 1];
-  console.log('Aqui', finalInvestimentObject);
 
   doughnutChartReference = new Chart(finalMoneyChart, {
     type: 'doughnut',
@@ -168,6 +166,7 @@ function resetCharts() {
   }
 }
 
+
 function clearForm() {
   form['starting-amount'].value = '';
   form['additional'].value = '';
@@ -178,8 +177,6 @@ function clearForm() {
   resetCharts();
 
   const linhas = tabela.getElementsByTagName('tr');
-  // linhas += tabela.getElementsByTagName('th');
-  // tabela.deleteRow(titulo);
 
   while (linhas.length > 0) {
     tabela.deleteRow(0);
